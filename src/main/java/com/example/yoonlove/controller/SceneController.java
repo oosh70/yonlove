@@ -1,8 +1,10 @@
 package com.example.yoonlove.controller;
 
+
 import com.example.yoonlove.dto.ActorDto;
 import com.example.yoonlove.dto.SceneDto;
 import com.example.yoonlove.service.SceneService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
