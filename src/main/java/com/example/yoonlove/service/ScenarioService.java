@@ -1,6 +1,6 @@
 package com.example.yoonlove.service;
 
-import com.example.yoonlove.Dto.ScenarioDto;
+import com.example.yoonlove.dto.ScenarioDto;
 import com.example.yoonlove.mapper.ScenarioMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

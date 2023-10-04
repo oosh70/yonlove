@@ -1,6 +1,6 @@
-package com.example.yoonlove.Controller;
+package com.example.yoonlove.controller;
 
-import com.example.yoonlove.Dto.CreatorDto;
+import com.example.yoonlove.dto.CreatorDto;
 import com.example.yoonlove.service.CreatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

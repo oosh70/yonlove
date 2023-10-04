@@ -1,7 +1,7 @@
 package com.example.yoonlove.mapper;
 
-import com.example.yoonlove.Dto.NoticeDto;
-import com.example.yoonlove.Dto.QnADto;
+import com.example.yoonlove.dto.NoticeDto;
+import com.example.yoonlove.dto.QnADto;
 
 import org.apache.ibatis.annotations.Mapper;
 

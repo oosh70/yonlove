@@ -1,8 +1,7 @@
-package com.example.yoonlove.Controller;
+package com.example.yoonlove.controller;
 
-import com.example.yoonlove.Dto.CreatorDto;
-import com.example.yoonlove.Dto.NoticeDto;
-import com.example.yoonlove.Dto.QnADto;
+import com.example.yoonlove.dto.NoticeDto;
+import com.example.yoonlove.dto.QnADto;
 import com.example.yoonlove.service.CreatorService;
 import com.example.yoonlove.service.CsService;
 import org.springframework.beans.factory.annotation.Autowired;

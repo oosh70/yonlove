@@ -1,8 +1,6 @@
-package com.example.yoonlove.Controller;
+package com.example.yoonlove.controller;
 
-import com.example.yoonlove.Dto.NoticeDto;
-import com.example.yoonlove.Dto.ScenarioDto;
-import com.example.yoonlove.service.CsService;
+import com.example.yoonlove.dto.ScenarioDto;
 import com.example.yoonlove.service.ScenarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -61,6 +59,17 @@ public class ScenarioController {
     public ModelAndView updateScenario(){
         //실행할 메소드(서비스 부분에 있는 메소드)
         scenarioService.updateScenario();
+
+        //세션 객체생셩
+        ModelAndView mv = new ModelAndView();
+        //보여줄 view페이지 이름(ooo.mustache)
+        mv.setViewName("/test");
+        return mv;
+    }
+    @GetMapping("/deletescenario")
+    public ModelAndView deleteQnA(){
+        //실행할 메소드(서비스 부분에 있는 메소드)
+        scenarioService.deleteScenario();
 
         //세션 객체생셩
         ModelAndView mv = new ModelAndView();
