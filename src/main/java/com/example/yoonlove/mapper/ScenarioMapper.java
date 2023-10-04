@@ -1,6 +1,6 @@
 package com.example.yoonlove.mapper;
 
-import com.example.yoonlove.Dto.ScenarioDto;
+import com.example.yoonlove.dto.ScenarioDto;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.example.yoonlove.service;
 
-import com.example.yoonlove.Dto.NoticeDto;
-import com.example.yoonlove.Dto.QnADto;
+import com.example.yoonlove.dto.NoticeDto;
+import com.example.yoonlove.dto.QnADto;
 import com.example.yoonlove.mapper.CsMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

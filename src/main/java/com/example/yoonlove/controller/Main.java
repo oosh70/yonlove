@@ -1,4 +1,4 @@
-package com.example.yoonlove.Controller;
+package com.example.yoonlove.controller;
 
 public class Main {
     public void test(){

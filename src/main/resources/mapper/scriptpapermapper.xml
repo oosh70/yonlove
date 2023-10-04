@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.yoonlove.mapper.ScriptPaperMapper">
+    <!--스크립트페이퍼 sql-->
+    <select id="selectScriptPaper">
+        SELECT * FROM notice where notice_id='1번글'
+    </select>
+
+    <select id="selectScriptPaper">
+        SELECT * FROM notice
+    </select>
+
+    <insert id="insertScriptPaper">
+        insert into notice values(
+        '5번글','쿼리로 입력한제목','내용입니다','관리자','2023-9-01','2023-9-02',0,'테스트관리자')
+    </insert>
+
+    <update id="updateScriptPaper">
+        insert into notice values(
+        '5번글','쿼리로 입력한제목','내용입니다','관리자','2023-9-01','2023-9-02',0,'테스트관리자')
+    </update>
+
+    <delete id="deleteScriptPaper">
+        delete from notice where notice_id='5번글'
+    </delete>
+
+<!--촬영테이블 sql-->
+    <select id="selectTimeTable">
+        SELECT * FROM notice where notice_id='1번글'
+    </select>
+
+    <select id="selectTimeTable">
+        SELECT * FROM notice
+    </select>
+
+    <insert id="insertTimeTable">
+        insert into notice values(
+        '5번글','쿼리로 입력한제목','내용입니다','관리자','2023-9-01','2023-9-02',0,'테스트관리자')
+    </insert>
+
+    <update id="updateTimeTable">
+        insert into notice values(
+        '5번글','쿼리로 입력한제목','내용입니다','관리자','2023-9-01','2023-9-02',0,'테스트관리자')
+    </update>
+
+    <delete id="deleteTimeTable">
+        delete from notice where notice_id='5번글'
+    </delete>
+</mapper>

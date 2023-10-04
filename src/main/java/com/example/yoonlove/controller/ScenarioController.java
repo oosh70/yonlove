@@ -1,8 +1,6 @@
-package com.example.yoonlove.Controller;
+package com.example.yoonlove.controller;
 
-import com.example.yoonlove.Dto.NoticeDto;
-import com.example.yoonlove.Dto.ScenarioDto;
-import com.example.yoonlove.service.CsService;
+import com.example.yoonlove.dto.ScenarioDto;
 import com.example.yoonlove.service.ScenarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

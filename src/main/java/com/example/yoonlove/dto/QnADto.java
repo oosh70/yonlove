@@ -1,4 +1,4 @@
-package com.example.yoonlove.Dto;
+package com.example.yoonlove.dto;
 
 import java.sql.Date;
 
