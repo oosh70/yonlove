@@ -3,7 +3,7 @@ package com.example.yoonlove.Dto;
 import java.sql.Date;
 
 public class NoticeDto {
-    private String notice_id;
+    private int notice_id;
     private String notice_title;
     private String notice_content;
     private String notice_writer;
@@ -12,11 +12,11 @@ public class NoticeDto {
     private int notice_cnt;
     private String user_id;
 
-    public String getNotice_id() {
+    public int getNotice_id() {
         return notice_id;
     }
 
-    public void setNotice_id(String notice_id) {
+    public void setNotice_id(int notice_id) {
         this.notice_id = notice_id;
     }
 

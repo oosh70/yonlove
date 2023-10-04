@@ -14,7 +14,7 @@
 
     <insert id="insertNotice">
         insert into notice values(
-        '5번글','쿼리로 입력한제목','내용입니다','관리자','2023-9-01','2023-9-02',0,'테스트관리자')
+        1,'쿼리로 입력한제목','내용입니다','관리자','2023-9-02',0,'test')
     </insert>
 
     <update id="updateNotice">
