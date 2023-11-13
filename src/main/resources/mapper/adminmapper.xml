@@ -145,7 +145,6 @@
     </delete>
 
 
-
     <!--회사-->
     <select id="selectCompany" resultType="com.example.yoonlove.dto.CompanyDto">
         SELECT * FROM company where company_id=#{company_id}

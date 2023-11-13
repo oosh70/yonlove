@@ -40,21 +40,16 @@ public class LoginController {
         return "/login/companysignup";
     }
 
-    @GetMapping("companysignup")
+    @GetMapping("/companysignup")
     @ResponseBody
     public String companysign(CompanyDto dto, Principal user, UserDto userDto ) {
-
         //기업회원가입 로직 sql
         userService.companysignup(dto);
-
         String companyID = userService.lastCompanyID();
         //-------------테이블생성
-
         String userId = user.getName(); // 유저id
-
         userService.updateUserCompanyID(userId, companyID);
-
-        return "redirect:/index";
+        return "/index";
     }
 
 
@@ -69,13 +64,9 @@ public class LoginController {
 
 
     @PostMapping("/ConfirmId")
-    public ResponseEntity<?> confirmId(@RequestParam("user_id") String user_id) {
-        ModelAndView mv = new ModelAndView();
+    public ResponseEntity<Boolean> confirmId(@RequestParam("user_id") String user_id) {
         UserDto dto = new UserDto();
         dto.setUser_id(user_id);
-        mv.setViewName("/login/signup");
-        mv.addObject("ConfirmId", userService.selectId(dto));
-
         boolean isIdAvailable = userService.selectId(dto);
         return ResponseEntity.ok(isIdAvailable);
     }

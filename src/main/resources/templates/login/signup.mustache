@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,11 +8,11 @@
 
     <title>회원가입</title>
     <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/static/js/join.js"></script>  <!--아이디,비밀번호 확인기능 -->
     <script src="/static/js/cu_alert.js"></script>
     <link rel="stylesheet" href="/static/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 
     {{>layout/header}}
 </head>
@@ -21,39 +22,33 @@
     <h2>회원가입</h2>
     <form id="alert" class="joinForm" method="get" action="/signup">
 
-        <!-- required 란?
-        사용자가 해당 필드를 작성하지 않고 제출하려고 할 때 브라우저가 사용자에게 경고를 표시하고 제출을 막는 역할
-        즉, 사용자에게 필수 입력 사항이란것을 알려주는 요소이다.-->
-
         <label for="user_id">아이디:</label>
         <input type="text" class="field1" id="user_id" name="user_id" required>
-        <input type="hidden" name="decide_id" id="decide_id"> <!-- name="decide_id"  삭제여부 추후 확인예정!!!!!!-->
-        <p><span id="decide" style='color:red;'>ID 중복 여부를 확인</span>
-            <input type="button" id="check_button" value="ID 중복 검사" onclick="checkIdDuplicate();"></p>
-
+        <span id="decide" style="color:red;"></span>
+        <button type="button" id="check_button" onclick="checkIdDuplicate();">ID 중복 검사</button> <br><br>
 
         <label for="pw">비밀번호:</label>
-        <input type="password" class="field2" id="pw" name="pw" onkeyup="passwordCheckFunction();" required>
+        <input type="password" class="field2" id="pw" name="pw" onkeyup="passwordCheckFunction();" required><br><br>
 
         <label for="confirm_password">비밀번호 확인:</label>
-        <input type="password" class="field3" id="confirm_password" onkeyup="passwordCheckFunction();"  required>
-        <div id="passwordCheckMessage" style="color: red;"></div>
+        <input type="password" class="field3" id="confirm_password" onkeyup="passwordCheckFunction();" required>
+        <div id="passwordCheckMessage" style="color: red;"></div> <br>
 
         <label for="name">이름:</label>
-        <input type="text" class="field4" id="user_name" name="user_name" required>
+        <input type="text" class="field4" id="user_name" name="user_name" required> <br><br>
 
         <label for="nickname">닉네임 :</label>
-        <input type="text" class="field5" id="nickname" name="nickname" required>
+        <input type="text" class="field5" id="nickname" name="nickname" required><br><br>
 
         <label for="phone">핸드폰번호:</label>
-        <input type="text" class="field6" id="phone" name="phone" required>
+        <input type="text" class="field6" id="phone" name="phone" required><br><br>
 
         <label for="email">이메일:</label>
-        <input type="email" class="field7" id="email" name="email" required>
+        <input type="email" class="field7" id="email" name="email" required><br><br>
 
         <label for="zip_code">우편번호:</label>
         <input type="text" class="field8" id="zip_code" name="zip_code" placeholder="우편번호" required>
-        <input type="button" onclick="execDaumPostcode()" value="우편번호 찾기"><br>
+        <input type="button" onclick="execDaumPostcode()" value="우편번호 찾기"><br><br>
 
         <label for="address">주소:</label>
         <input type="text" class="field9" id="address1"  name="address1" placeholder="주소" required ><br>
@@ -78,7 +73,7 @@
                     // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
                     // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                    // 내려오는 변수가 값이 없는 경우엔 공백값을 가지므로, 이를 참고하여 분기 한다.
                     var addr = ''; // 주소 변수
                     var extraAddr = ''; // 참고항목 변수
 

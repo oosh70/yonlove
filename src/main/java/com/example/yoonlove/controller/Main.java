@@ -66,7 +66,6 @@ public class Main {
         //페이징에 필요한센션
         mv.addObject("paging", pageInfo);  //페이징정보
 
-
         // 달력
         //현재 날짜를 가저옴
         int year = LocalDate.now().getYear();

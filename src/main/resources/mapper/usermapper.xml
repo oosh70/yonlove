@@ -45,8 +45,7 @@
         )
     </insert>
 
-    <select id="lastCompanyID"  >
-
+    <select id="lastCompanyID">
         select concat('company',max(to_number(substr(company_id,8)))) from  company
     </select>
 
@@ -57,24 +56,12 @@
         WHERE user_id = #{user}
     </update>
 
-
-
-
-
     <update id="updateUser" parameterType="com.example.yoonlove.dto.UserDto" >
-
         update users
         set company_id = #{company_id}
 
         where user_id = #{user_id}
-
-
     </update>
-
-
-
-
-
 
 
     <select id="selectId" resultType="boolean">  <!-- !!!!!!아이디 중복체크 !!!!!!!!! -->
