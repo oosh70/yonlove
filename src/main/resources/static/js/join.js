@@ -10,11 +10,9 @@
         	//Ajax로 전송
         	$.ajax({
         		url : '/ConfirmId',
-        		data : {
-        			user_id : id
-        		},
+        		data : {user_id : id},
         		type : 'POST',
-        		dataType : 'json',
+        		/*dataType : 'json',*/
         		success : function(result) {
 
         			if (result === false) {
@@ -46,4 +44,3 @@
         			$('#passwordCheckMessage').html('');
         		}
         	}
-

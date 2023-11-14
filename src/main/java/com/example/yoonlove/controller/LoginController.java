@@ -63,7 +63,7 @@ public class LoginController {
     }
 
 
-    @PostMapping("/ConfirmId")
+    @PostMapping("ConfirmId")
     public ResponseEntity<Boolean> confirmId(@RequestParam("user_id") String user_id) {
         UserDto dto = new UserDto();
         dto.setUser_id(user_id);
